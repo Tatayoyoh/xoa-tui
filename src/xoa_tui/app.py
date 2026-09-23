@@ -12,7 +12,7 @@ class XoaApp(App):
     """TUI de pilotage XOA/xcp-ng en remote SSH."""
 
     CSS_PATH = "app.tcss"
-    TITLE = "xoa-cli"
+    TITLE = "xoa-tui"
 
     def on_mount(self) -> None:
         self.start()

@@ -2,11 +2,11 @@ from pathlib import Path
 
 import pytest
 
-from xoa_cli import config as config_module
-from xoa_cli.app import XoaApp
-from xoa_cli.config import Config
-from xoa_cli.screens.connect import ConnectScreen
-from xoa_cli.screens.dashboard import DashboardScreen
+from xoa_tui import config as config_module
+from xoa_tui.app import XoaApp
+from xoa_tui.config import Config
+from xoa_tui.screens.connect import ConnectScreen
+from xoa_tui.screens.dashboard import DashboardScreen
 
 
 @pytest.fixture(autouse=True)

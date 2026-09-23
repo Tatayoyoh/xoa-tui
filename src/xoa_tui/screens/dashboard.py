@@ -34,7 +34,7 @@ class DashboardScreen(Screen):
         yield Footer()
 
     def on_mount(self) -> None:
-        self.title = f"xoa-cli — {self.config.ssh_user}@{self.config.host}"
+        self.title = f"xoa-tui — {self.config.ssh_user}@{self.config.host}"
 
     async def on_button_pressed(self, event: Button.Pressed) -> None:
         entry = COMMANDS.get(event.button.id or "")

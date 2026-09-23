@@ -4,7 +4,7 @@ import tomllib
 from dataclasses import dataclass
 from pathlib import Path
 
-CONFIG_DIR = Path.home() / ".config" / "xoa-cli"
+CONFIG_DIR = Path.home() / ".config" / "xoa-tui"
 CONFIG_FILE = CONFIG_DIR / "config.toml"
 
 

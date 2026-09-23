@@ -2,8 +2,8 @@ from pathlib import Path
 
 import pytest
 
-from xoa_cli import config as config_module
-from xoa_cli.config import Config
+from xoa_tui import config as config_module
+from xoa_tui.config import Config
 
 
 @pytest.fixture(autouse=True)

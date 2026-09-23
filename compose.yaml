@@ -1,8 +1,8 @@
 services:
-  xoa-cli:
+  xoa-tui:
     build: .
     stdin_open: true
     tty: true
     volumes:
       - ${HOME}/.ssh:/root/.ssh:ro
-      - ${HOME}/.config/xoa-cli:/root/.config/xoa-cli
+      - ${HOME}/.config/xoa-tui:/root/.config/xoa-tui

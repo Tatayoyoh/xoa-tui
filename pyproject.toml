@@ -1,5 +1,5 @@
 [project]
-name = "xoa-cli"
+name = "xoa-tui"
 version = "0.1.0"
 description = "TUI pour piloter XOA/xcp-ng en remote via SSH"
 readme = "README.md"
@@ -16,7 +16,7 @@ dev = [
 ]
 
 [project.scripts]
-xoa-cli = "xoa_cli:main"
+xoa-tui = "xoa_tui:main"
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"

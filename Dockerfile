@@ -17,4 +17,4 @@ RUN uv sync --frozen --no-dev
 
 ENV PATH="/app/.venv/bin:$PATH"
 
-ENTRYPOINT ["xoa-cli"]
+ENTRYPOINT ["xoa-tui"]
