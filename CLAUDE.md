@@ -6,10 +6,10 @@ TUI simple pour piloter un XOA / XCP-ng en remote SSH : l'app ouvre une session 
 
 ## Stack
 - Langage : Python 3.13, gestion de projet et de venv avec `uv`
-- TUI : `textual`
+- TUI : `textual` (≥ 8.2 — rester sur la dernière version, ne pas retomber sur les API 0.x)
 - SSH : binaire `ssh` du système via `asyncio.create_subprocess_exec` (aucune lib SSH embarquée) — hérite des clés, de l'agent et de `~/.ssh/config` de l'utilisateur
 - Exécution : Docker (`docker compose run --rm xoa-cli`) ou en local via `uv run`
-- Dépôt distant : <à renseigner> (créé par l'utilisateur, ne pas modifier le remote)
+- Dépôt distant : GitHub `Tatayoyoh/xoa-tui` (créé par l'utilisateur, ne pas modifier le remote)
 
 ## Commandes
 - Lancer la TUI : `uv run xoa-cli`
@@ -39,3 +39,5 @@ TUI simple pour piloter un XOA / XCP-ng en remote SSH : l'app ouvre une session 
 - Les tests TUI tournent en headless via `app.run_test()` ; la config est isolée en monkeypatchant `config.CONFIG_DIR` / `config.CONFIG_FILE` (constantes de module, lues à l'appel).
 - En Docker, `~/.ssh` est monté en lecture seule et `~/.config/xoa-cli` en volume pour que le serveur reste mémorisé entre deux runs ; il faut `stdin_open`/`tty` pour une TUI.
 - Aucun hôte XOA/XCP-ng réel n'est joignable depuis la VM : les commandes distantes ne peuvent pas être testées en vrai ici, seulement mockées.
+- Le nom du dépôt distant (`xoa-tui`) diffère du nom du projet local (`xoa-cli`) : c'est voulu tant que l'utilisateur n'a pas tranché.
+- La VM n'a ni clé SSH ni agent (`~/.ssh` ne contient qu'`authorized_keys`) : `git push` vers GitHub échoue tant qu'une clé n'y est pas installée et déclarée côté GitHub.
