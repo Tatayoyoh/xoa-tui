@@ -15,6 +15,7 @@ class XoaApp(App):
     TITLE = "xoa-tui"
 
     def on_mount(self) -> None:
+        self.theme = "nord"
         self.start()
 
     @work

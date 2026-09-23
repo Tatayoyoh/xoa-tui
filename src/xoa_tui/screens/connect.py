@@ -22,6 +22,7 @@ class ConnectScreen(Screen[Config]):
         yield Footer()
 
     def on_mount(self) -> None:
+        self.query_one("#connect-form", Vertical).border_title = "xoa-tui"
         self.query_one("#host", Input).focus()
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
