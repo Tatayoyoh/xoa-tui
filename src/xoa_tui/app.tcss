@@ -1,57 +1,87 @@
 Screen {
-    background: $surface;
+    background: $background;
+}
+
+Header {
+    background: $background;
+    color: $text-muted;
+    text-style: none;
+}
+
+HeaderIcon {
+    display: none;
+}
+
+Footer {
+    background: $background;
 }
 
 #connect-form {
     align: center middle;
-    width: 64;
+    width: 50;
     height: auto;
-    background: $panel;
-    border: round $primary;
-    border-title-color: $text-primary;
-    border-title-style: bold;
-    padding: 1 3;
-    margin: 2 4;
+    margin: 4 4;
 }
 
 #connect-form > Label {
-    color: $text-muted;
-    margin-bottom: 1;
+    color: $text;
+    text-style: bold;
+    margin-bottom: 2;
 }
 
 #connect-form Input {
+    background: $background;
+    border: none;
+    border-bottom: solid $secondary;
     margin-bottom: 1;
-    border: round $primary-muted;
+    padding: 0 1;
 }
 
 #connect-form Input:focus {
-    border: round $primary;
+    border-bottom: solid $primary;
 }
 
 #connect-form Button {
-    margin-top: 1;
+    margin-top: 2;
     width: 100%;
+    background: $primary;
+    color: $background;
+    border: none;
+    text-style: bold;
+}
+
+#connect-form Button:hover {
+    background: $primary-lighten-1;
 }
 
 #actions {
     height: auto;
-    background: $panel;
-    border: round $primary-muted;
-    border-title-color: $text-muted;
-    padding: 1;
-    margin: 1 1 0 1;
+    padding: 1 1 0 1;
 }
 
 #actions Button {
+    background: $panel;
+    color: $text;
+    border: none;
     margin-right: 1;
 }
 
+#actions Button:hover {
+    background: $primary 20%;
+    color: $primary;
+}
+
+#actions Button:focus {
+    text-style: bold;
+    color: $primary;
+}
+
 #output {
-    background: $surface;
-    border: round $primary;
-    border-title-color: $text-primary;
-    border-title-style: bold;
-    margin: 1;
-    padding: 0 1;
+    background: $background;
+    border-top: solid $panel-lighten-2;
+    scrollbar-size: 1 1;
+    scrollbar-color: $panel-lighten-2;
+    margin: 1 1 0 1;
+    padding: 1;
     height: 1fr;
 }

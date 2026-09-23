@@ -35,8 +35,6 @@ class DashboardScreen(Screen):
 
     def on_mount(self) -> None:
         self.title = f"xoa-tui — {self.config.ssh_user}@{self.config.host}"
-        self.query_one("#actions", Horizontal).border_title = "Actions"
-        self.query_one("#output", RichLog).border_title = "Sortie"
 
     async def on_button_pressed(self, event: Button.Pressed) -> None:
         entry = COMMANDS.get(event.button.id or "")
