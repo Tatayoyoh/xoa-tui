@@ -1,0 +1,26 @@
+#connect-form {
+    align: center middle;
+    width: 60;
+    height: auto;
+    border: round $accent;
+    padding: 1 2;
+    margin: 2 4;
+}
+
+#connect-form Input {
+    margin-bottom: 1;
+}
+
+#actions {
+    height: auto;
+    padding: 1;
+}
+
+#actions Button {
+    margin-right: 1;
+}
+
+#output {
+    border: round $panel;
+    height: 1fr;
+}

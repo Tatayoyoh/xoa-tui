@@ -1,0 +1,8 @@
+services:
+  xoa-cli:
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - ${HOME}/.ssh:/root/.ssh:ro
+      - ${HOME}/.config/xoa-cli:/root/.config/xoa-cli

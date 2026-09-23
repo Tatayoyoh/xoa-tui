@@ -1,0 +1,27 @@
+[project]
+name = "xoa-cli"
+version = "0.1.0"
+description = "TUI pour piloter XOA/xcp-ng en remote via SSH"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "textual>=0.60",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "textual-dev>=1.5",
+]
+
+[project.scripts]
+xoa-cli = "xoa_cli:main"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["uv_build>=0.12.18,<0.13.0"]
+build-backend = "uv_build"
